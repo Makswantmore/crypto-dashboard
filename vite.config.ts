@@ -7,4 +7,6 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+  // ВАЖНО: эта строка говорит Vite, что сайт лежит в папке с именем репозитория
+  base: '/crypto-dashboard/', 
 })
