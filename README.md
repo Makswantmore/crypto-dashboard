@@ -35,6 +35,14 @@
 | Icons      | Lucide React                        |
 | Data       | CoinGecko API (free tier)           |
 
+## 📱 PWA Support
+
+This app is a **Progressive Web App** and can be installed on mobile devices:
+- Works offline
+- Installable from browser
+- Native-like experience
+- No app store required
+
 ## 🚀 Quick Start
 
 ### Prerequisites
