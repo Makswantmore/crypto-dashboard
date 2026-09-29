@@ -44,10 +44,10 @@ export default function App() {
       {/* Основной контент */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         
-        {/* Левая колонка на ПК / Верх на мобильных: Заголовок + График + Периоды */}
+        {/* Левая колонка: Заголовок + График */}
         <div className="lg:col-span-2 order-1">
-          {/* Заголовок монеты в стиле СберИнвестиций */}
-          {selectedCoinData && (
+          {/* Заголовок монеты */}
+          {selectedCoinData ? (
             <div className="mb-6">
               <div className="flex items-center gap-3 mb-2">
                 <img
@@ -84,6 +84,8 @@ export default function App() {
                 </span>
               </div>
             </div>
+          ) : (
+            <div className="mb-6 h-24 bg-[#1a2332] rounded-xl animate-pulse" />
           )}
 
           {/* График */}
@@ -95,10 +97,10 @@ export default function App() {
           />
         </div>
 
-        {/* Правая колонка на ПК / Низ на мобильных: Статистика + Список монет */}
+        {/* Правая колонка: Статистика + Список монет */}
         <div className="lg:col-span-1 order-2 space-y-6">
           
-          {/* Статистика выбранной монеты */}
+          {/* Статистика */}
           <div className="space-y-3">
             <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wide">
               Статистика
@@ -121,8 +123,8 @@ export default function App() {
               Все монеты
             </h3>
             <div className="space-y-2 max-h-[600px] overflow-y-auto pr-2">
-              {loading ? (
-                <p className="text-gray-500 text-center py-8">Загрузка...</p>
+              {coins.length === 0 ? (
+                <p className="text-gray-500 text-center py-8">Загрузка монет...</p>
               ) : (
                 coins.map((coin, index) => (
                   <CryptoCard
