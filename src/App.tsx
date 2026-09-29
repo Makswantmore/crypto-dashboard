@@ -53,6 +53,7 @@ export default function App() {
                 <img
                   src={selectedCoinData.image}
                   alt={selectedCoinData.name}
+                  referrerPolicy="no-referrer"
                   className="w-10 h-10 rounded-full bg-white p-1"
                   onError={(e) => {
                     (e.target as HTMLImageElement).style.display = 'none'

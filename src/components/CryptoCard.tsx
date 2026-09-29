@@ -31,7 +31,7 @@ export default function CryptoCard({ coin, isSelected, onClick, index }: Props) 
         <img
           src={coin.image}
           alt={coin.name}
-          
+          referrerPolicy="no-referrer"
           className="w-10 h-10 rounded-full bg-white p-1 object-contain"
           onError={() => setImgError(true)} 
         />
