@@ -13,7 +13,6 @@ export default function App() {
     setSelectedCoin,
     selectedPeriod,
     setSelectedPeriod,
-    loading,
     chartLoading,
     searchQuery,
     setSearchQuery,
