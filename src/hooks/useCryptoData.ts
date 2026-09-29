@@ -83,7 +83,6 @@ export function useCryptoData() {
   const [chartData, setChartData] = useState<ChartDataPoint[]>(generateFallbackChart('7'))
   const [selectedCoin, setSelectedCoin] = useState('bitcoin')
   const [selectedPeriod, setSelectedPeriod] = useState<TimePeriod>('7')
-  const [loading, setLoading] = useState(false) 
   const [chartLoading, setChartLoading] = useState(false)
   const [searchQuery, setSearchQuery] = useState('')
 
@@ -151,7 +150,6 @@ export function useCryptoData() {
     setSelectedCoin,
     selectedPeriod,
     setSelectedPeriod,
-    loading,
     chartLoading,
     searchQuery,
     setSearchQuery,
