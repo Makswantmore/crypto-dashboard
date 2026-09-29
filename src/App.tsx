@@ -4,6 +4,7 @@ import CryptoCard from './components/CryptoCard'
 import PriceChart from './components/PriceChart'
 import StatsCard from './components/StatsCard'
 import InstallButton from './components/InstallButton'
+import ChatWidget from './components/ChatWidget'
 
 export default function App() {
   const {
@@ -141,6 +142,7 @@ export default function App() {
       </div>
 
       <InstallButton />
+      <ChatWidget />
     </div>
   )
 }
